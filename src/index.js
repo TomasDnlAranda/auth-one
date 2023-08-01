@@ -9,6 +9,9 @@ import { AuthProvider } from './context/AuthContext';
 const root = document.getElementById('root');
 const rootElement = ReactDOM.createRoot(root);
 
+/* 
+Configura una aplicación de React con enrutamiento y autenticación.
+*/
 rootElement.render(
 	<React.StrictMode>
 		<AuthProvider>

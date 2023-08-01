@@ -5,6 +5,9 @@ import LoginForm from '../pages/LoginForm';
 import Home from '../pages/Home';
 import Error404 from '../pages/Error404';
 
+/* 
+configura las rutas de la aplicación para mostrar diferentes componentes según la URL actual. 
+*/
 const AppRouter = () => {
 	return (
 		<Routes>

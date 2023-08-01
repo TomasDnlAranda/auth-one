@@ -2,13 +2,18 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
+	/* 
+	datos del formulario
+   */
 	const [formData, setFormData] = useState({
 		email: 'tomas@test.com',
 		password: '123456',
 	});
 
+	/* 
+	validacion de formulario y navegacion entre las rutas
+   */
 	const [error, setError] = useState(null);
-	const navigate = useNavigate();
 
 	const handleInputChange = (event) => {
 		const { name, value } = event.target;
@@ -18,16 +23,13 @@ const LoginForm = () => {
 		});
 	};
 
+	/* 
+	obtener los datos del formulario de login
+   */
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		try {
-			console.log(formData);
-			setError('');
-			navigate('/home');
-		} catch (error) {
-			console.log(error);
-			setError('Error de servidor');
-		}
+		// datos
+		console.log(formData);
 	};
 
 	return (

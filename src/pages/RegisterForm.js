@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const RegisterForm = () => {
+	/* 
+	datos del formulario
+   */
 	const [formData, setFormData] = useState({
 		firstname: 'Tomas',
 		lastname: 'Aranda',
@@ -9,29 +12,27 @@ const RegisterForm = () => {
 		password: '123456',
 	});
 
+	/* 
+	validacion de formulario
+   */
 	const [error, setError] = useState(null);
 	const [success, setSuccess] = useState(false);
 
-	const handleInputChange = (event) => {
-		const { name, value } = event.target;
+	const handleInputChange = (e) => {
+		const { name, value } = e.target;
 		setFormData({
 			...formData,
 			[name]: value,
 		});
 	};
 
-	const handleSubmit = async (e) => {
+	/* 
+	obtener los datos del formulario de registro
+   */
+	const handleSubmit = (e) => {
 		e.preventDefault();
-
-		try {
-			console.log(formData);
-			setError('');
-			setSuccess(true);
-		} catch (error) {
-			console.log(error);
-			setError('Error de servidor');
-			setSuccess(false);
-		}
+		// datos
+		console.log(formData);
 	};
 
 	return (
