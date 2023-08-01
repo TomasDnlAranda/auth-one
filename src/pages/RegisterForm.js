@@ -31,7 +31,7 @@ const RegisterForm = () => {
    */
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// datos
+		// data
 		console.log(formData);
 	};
 
